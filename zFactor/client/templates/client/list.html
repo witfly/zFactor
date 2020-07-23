@@ -1,0 +1,20 @@
+
+    <table>
+        <tr>
+            <th>Client Id</th>
+            <th>Client Name</th>
+        </tr>
+        {% for client in client_list %}
+        <tr>
+            <td>
+                {{ client.client_id}}
+            </td>
+            <td>
+               <a href= '{% url "client_detail" id=client.client_id %}'>{{ client.client_name}} </a> 
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

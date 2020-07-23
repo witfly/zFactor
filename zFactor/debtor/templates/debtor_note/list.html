@@ -1,0 +1,28 @@
+
+    <table>
+        <tr>
+            <th>Note ID</th>
+            <th>Note</th>
+            <th>Date Created</th>
+            <th> Is Active </th>
+        </tr>
+        {% for note in debtor_note %}
+        <tr>
+            <td>
+                <a href= '{% url "debtor_note_detail" id=note.debtor_note_id %}'>{{ note.note_id }}</a>
+            </td>
+            <td>
+                {{ note.debtor_note }}
+            </td>
+            <td>
+               {{ note.date_created }}  
+            </td>
+            <td>
+                {{ note.isActive }}  
+             </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

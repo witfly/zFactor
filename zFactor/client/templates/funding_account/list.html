@@ -1,0 +1,24 @@
+
+    <table>
+        <tr>
+            <th>Account Name</th>
+            <th>Beneficiary</th>
+            <th>Date Created</th>
+        </tr>
+        {% for account in funding_account %}
+        <tr>
+            <td>
+                <a href= '{% url "funding_account_detail" id=account.funding_account_id %}'>{{ account.account_name }}</a>
+            </td>
+            <td>
+                {{ account.beneficiary_name }} 
+            </td>
+            <td>
+                {{ account.date_created }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

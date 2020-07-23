@@ -1,0 +1,4 @@
+<form method = 'POST'>{% csrf_token %}
+   <p>{{ funding_account.account_name }} - {{ funding_account.address_1 }}</p> 
+    <input type='submit' value='save' />
+</form>

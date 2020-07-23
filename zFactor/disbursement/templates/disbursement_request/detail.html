@@ -1,0 +1,4 @@
+<form method = 'POST'>{% csrf_token %}
+   <p>{{ debtor.name }} - {{ debtor.address_1}} - {{ debtor.credit_score }}</p> 
+    <input type='submit' value='save' />
+</form>

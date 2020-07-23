@@ -1,0 +1,4 @@
+<form method = 'POST'>{% csrf_token %}
+   <p>{{ client_contact.client }} - {{ client_contact.contact }}</p> 
+    <input type='submit' value='save' />
+</form>

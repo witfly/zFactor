@@ -1,0 +1,24 @@
+
+    <table>
+        <tr>
+            <th>Broker Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+        {% for terms in terms_list %}
+        <tr>
+            <td>
+                <a href= '{% url "terms_detail" id=terms.terms_id %}'>{{ sales_broker.first_name }} + ' ' + {{ sales_broker.last_name }}</a>
+            </td>
+            <td>
+                {{ sales_broker.address_1 }}
+            </td>
+            <td>
+               {{ sales_broker.phone }}  
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

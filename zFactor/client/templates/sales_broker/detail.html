@@ -1,0 +1,4 @@
+<form method = 'POST'>{% csrf_token %}
+   <p>{{ terms.flat_rate }} - {{ terms.advance_rate }}</p> 
+    <input type='submit' value='save' />
+</form>

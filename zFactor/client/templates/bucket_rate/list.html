@@ -1,0 +1,28 @@
+
+    <table>
+        <tr>
+            <th>Terms</th>
+            <th>Min Days</th>
+            <th>Max Days</th>
+            <th> Rate</th>
+        </tr>
+        {% for rate in bucket_rate %}
+        <tr>
+            <td>
+                <a href= '{% url "bucket_rate_detail" id=rate.bucket_rate_id %}'>{{ rate.terms}}</a>
+            </td>
+            <td>
+                {{ rate.min_days }}
+            </td>
+            <td>
+               {{ rate.max_days }}  
+            </td>
+            <td>
+                {{ rate.percentage_rate }}  
+             </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

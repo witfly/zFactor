@@ -1,0 +1,28 @@
+
+    <table>
+        <tr>
+            <th>Request Date</th>
+            <th>Requested By </th>
+            <th>Request Type</th>
+            <th> Amount </th>
+        </tr>
+        {% for request in disbursement_request %}
+        <tr>
+            <td>
+                <a href= '{% url "disbursement_request_detail" id=d.debtor_id %}'>{{ request.date_created }}</a>
+            </td>
+            <td>
+                {{ request.requested_by}}
+            </td>
+            <td>
+               {{ request.request_type}}  
+            </td>
+            <td>
+                {{ request.amount }}  
+             </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

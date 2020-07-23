@@ -1,0 +1,24 @@
+
+    <table>
+        <tr>
+            <th>Terms Description</th>
+            <th>Rate Type</th>
+            <th>Advance Rate</th>
+        </tr>
+        {% for terms in terms_list %}
+        <tr>
+            <td>
+                <a href= '{% url "terms_detail" id=terms.terms_id %}'>{{ terms.description}}</a>
+            </td>
+            <td>
+                {{ terms.transaction_fee_rate_type}}
+            </td>
+            <td>
+               {{ terms.advance_percentage}}  
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

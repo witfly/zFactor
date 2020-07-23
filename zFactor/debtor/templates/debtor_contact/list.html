@@ -1,0 +1,28 @@
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Credit Score</th>
+            <th> Status </th>
+        </tr>
+        {% for d in debtor %}
+        <tr>
+            <td>
+                <a href= '{% url "debtor_detail" id=d.debtor_id %}'>{{ debtor.name }}</a>
+            </td>
+            <td>
+                {{ debtor.address_1 }}
+            </td>
+            <td>
+               {{ debtor.credit_score }}  
+            </td>
+            <td>
+                {{ debtor.status }}  
+             </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

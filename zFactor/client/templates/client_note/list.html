@@ -1,0 +1,24 @@
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Note</th>
+            <th>Date Created</th>
+        </tr>
+        {% for note in client_note %}
+        <tr>
+            <td>
+                <a href= '{% url "terms_detail" id=terms.terms_id %}'>{{ note.category }}</a>
+            </td>
+            <td>
+                {{ note.client_note }}
+            </td>
+            <td>
+               {{ note.date_created }}  
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+

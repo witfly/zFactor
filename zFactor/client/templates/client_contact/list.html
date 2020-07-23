@@ -1,0 +1,24 @@
+
+    <table>
+        <tr>
+            <th>client</th>
+            <th>contact</th>
+            <th>Move Money?</th>
+        </tr>
+        {% for contact in client_contact %}
+        <tr>
+            <td>
+                <a href= '{% url "client_contact_detail" id=client_contact.contact_id %}'>{{ contact.client }} </a>
+            </td>
+            <td>
+                {{ contact.contact }}
+            </td>
+            <td>
+               {{ contact.can_move_money }}  
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+ 
+
